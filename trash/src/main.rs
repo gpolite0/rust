@@ -24,6 +24,37 @@ fn main() {
         println!("Array at index {i}: {}", array[i]);
     }
 
-    
+
     // vectors - variable size, all same type, allocated in memory
+
+    // one way to define a vector
+    let mut vector1 = vec![1, 2, 3];
+    vector1.push(4);
+
+    // another way to define a vector
+    let mut vector2 = Vec::new();
+    vector2.push(1);
+    vector2.push(2);
+    vector2.push(3);
+    vector2.push(4);
+
+    // indexing a vector
+    println!("The second elem is {}", vector1[1]);
+
+    // print all values
+    println!("\nog values");
+    for val in &vector2 {
+        println!("{val}");
+    }
+
+    // multiply all values by two
+    for i in &mut vector2 {
+        *i *= 2;
+    }
+
+    println!("\nnew values");
+    // print again w new values
+    for val in &vector2 {
+        println!("{val}");
+    }
 }
