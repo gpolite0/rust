@@ -14,4 +14,12 @@ fn main() {
     println!("Tuple element 0: {}", tuple.0);
     println!("Tuple element 1: {}", tuple.1);
     println!("Tuple element 2: {}", tuple.2);
+
+    // arrays - fixed size, allocated on heap
+    let array = ["Jan", "Feb", "Mar"];
+    let array_size = array.len();
+    
+    for i in 0..array_size {
+        println!("Array at index {i}: {}", array[i]);
+    }
 }
